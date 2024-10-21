@@ -15,9 +15,14 @@ public class AudioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z))
+        ToggleAudio();
+    }
+
+    void ToggleAudio()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            if(audioSource.isPlaying == true)
+            if (audioSource.isPlaying == true)
                 audioSource.Stop();
             else
                 audioSource.Play();
